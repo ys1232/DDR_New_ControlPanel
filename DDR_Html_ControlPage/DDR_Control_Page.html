@@ -8,7 +8,7 @@
 	background-color: DarkGray;
 	width:29px;
 	height:25px;
-	opacity: 0.5;
+	opacity: 0.1;
 	cursor: pointer; cursor: hand;
 }
 .img {
@@ -217,14 +217,15 @@ function displayDate(id)
 {
 	Changed = "T";
     var current_opacity =document.getElementById(id).style.opacity;
-	if (current_opacity == "0.5")
+	if (current_opacity == "0.8")
 	{
 		document.getElementById(id).style.opacity = "0.1";
 		Task_enabled_array[id] = "T";
+		//alert(id + ": " +Task_enabled_array[id]);
 	}
 	else if ((current_opacity == "0.1"))
 	{
-		document.getElementById(id).style.opacity= "0.5";
+		document.getElementById(id).style.opacity= "0.8";
 		Task_enabled_array[id] = "F";
 	}
 	else
@@ -238,6 +239,7 @@ function Group_Manipulation(id)
 {
 	Changed = "T";
 	Tasks = Lkup_Dict.get(id);
+	//alert("id :"+id);
 	Task_previous_state = "";
 
 	Tasks.forEach(function(task)
@@ -246,31 +248,31 @@ function Group_Manipulation(id)
 		if (Task_previous_state == "")
 		{
 			Task_previous_state = document.getElementById(task).style.opacity;
-			if (document.getElementById(task).style.opacity == "0.5")
+			if (document.getElementById(task).style.opacity == "0.8")
 			{
 				document.getElementById(task).style.opacity = "0.1";
-				Task_enabled_array[id] = "F";
+				Task_enabled_array[task] = "F";
 			}
 			else if (document.getElementById(task).style.opacity == "0.1")
 			{
-				document.getElementById(task).style.opacity = "0.5";
-				Task_enabled_array[id] = "F";
+				document.getElementById(task).style.opacity = "0.8";
+				Task_enabled_array[task] = "F";
 			}
 			else
 			{
 				document.getElementById(task).style.opacity = "0.1";
-				Task_enabled_array[id] = "T";
+				Task_enabled_array[task] = "T";
 			}		
 		}
-		else if (Task_previous_state  == "0.5")
+		else if (Task_previous_state  == "0.8")
 		{
 			document.getElementById(task).style.opacity = "0.1";
-			Task_enabled_array[id] = "T";
+			Task_enabled_array[task] = "T";
 		}	
 		else 
 		{
-			document.getElementById(task).style.opacity = "0.5";
-			Task_enabled_array[id] = "F";
+			document.getElementById(task).style.opacity = "0.8";
+			Task_enabled_array[task] = "F";
 		}		
 	});
 }
@@ -284,7 +286,7 @@ function Xml_Reading()
 {
     //alert("yes!");
 	var parser, xmlDoc;
-	XML_Text =readTextFile("C:\\Users\\Hui\\Desktop\\DDR_Html_ControlPage\\DD_Hierachy_Config.xml");
+	XML_Text =readTextFile("C:\\Users\\yshen\\Desktop\\DDR_ControlPanel\\DD_Hierachy_Config.xml");
 	parser = new DOMParser();
 	xmlDoc = parser.parseFromString(XML_Text,"text/xml");
 
@@ -314,7 +316,7 @@ function SetOpacity()
 		if (Task_enabled_array[key] == 'T')
 			document.getElementById(key).style.opacity = "0.1";
 		else
-			document.getElementById(key).style.opacity = "0.5";
+			document.getElementById(key).style.opacity = "0.8";
 	}
 }
 
@@ -327,7 +329,7 @@ window.onbeforeunload = function()
 		if (r == true) {
 			
 			var parser, xmlDoc;
-			XML_Text =readTextFile("C:\\Users\\Hui\\Desktop\\DDR_Html_ControlPage\\DD_Hierachy_Config.xml");
+			XML_Text =readTextFile("C:\\Users\\yshen\\Desktop\\DDR_ControlPanel\\DD_Hierachy_Config.xml");
 			parser = new DOMParser();
 			xmlDoc = parser.parseFromString(XML_Text,"text/xml");
 			
@@ -345,7 +347,7 @@ window.onbeforeunload = function()
 
 			var fso = new ActiveXObject("Scripting.FileSystemObject");
 			
-			var filename = "C:\\Users\\Hui\\Desktop\\DDR_Html_ControlPage\\DD_Hierachy_Config.xml";
+			var filename = "C:\\Users\\yshen\\Desktop\\DDR_ControlPanel\\DD_Hierachy_Config.xml";
 			if(fso.FileExists(filename))
 			{
 				//alert("file exists");

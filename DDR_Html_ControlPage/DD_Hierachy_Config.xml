@@ -8,9 +8,9 @@
 	</Container>
 	<Container status="" container_dependency="2" container_id="3" enabled="T" name="LOAD PMS AND CLINIC DATA">
 		<Task status="" enabled="T" name="pms" task_dependency="" Task_id="T_4" />
-		<Task status="" enabled="F" name="locale" task_dependency="" Task_id="T_5" />
+		<Task status="" enabled="T" name="locale" task_dependency="" Task_id="T_5" />
 		<Task status="" enabled="T" name="country_lkup" task_dependency="" Task_id="T_6" />
-		<Task status="" enabled="F" name="state_lkup" task_dependency="" Task_id="T_7" />
+		<Task status="" enabled="T" name="state_lkup" task_dependency="" Task_id="T_7" />
 		<Task status="" enabled="T" name="pms_switch_hospitals" task_dependency="" Task_id="T_8" />
 		<Task status="" enabled="T" name="hospital" task_dependency="" Task_id="T_9" />
 	</Container>
@@ -32,31 +32,31 @@
 		<Task status="" enabled="T" name="pms_service_lookup1" task_dependency="" Task_id="T_21" />
 	</Container>
 	<Container status="" container_dependency="3" container_id="8" enabled="T" name="LOAD PATIENT METADATA">
-		<Task status="" enabled="T" name="pet_owner" task_dependency="" Task_id="T_23" />
-		<Task status="" enabled="T" name="appointment" task_dependency="" Task_id="T_24" />
-		<Task status="" enabled="T" name="vi_breed_cat_map" task_dependency="" Task_id="T_25" />
-		<Task status="" enabled="T" name="canine_breed_map" task_dependency="" Task_id="T_26" />
-		<Task status="" enabled="T" name="pms_color_lkup" task_dependency="" Task_id="T_27" />
-		<Task status="" enabled="T" name="vi_c_p_code_lkup" task_dependency="" Task_id="T_28" />
-		<Task status="" enabled="T" name="patient_vitals" task_dependency="" Task_id="T_29" />
-		<Task status="" enabled="T" name="pms_breed_lkup" task_dependency="" Task_id="T_30" />
-		<Task status="" enabled="T" name="vi_grooming_lkup" task_dependency="" Task_id="T_31" />
-		<Task status="" enabled="T" name="vi_color_lkup" task_dependency="" Task_id="T_32" />
-		<Task status="" enabled="T" name="pms_p_code_lkup" task_dependency="" Task_id="T_33" />
-		<Task status="" enabled="T" name="item_category" task_dependency="" Task_id="T_34" />
-		<Task status="" enabled="T" name="sub_lineitem" task_dependency="" Task_id="T_35" />
-		<Task status="" enabled="T" name="vi_breed_category" task_dependency="" Task_id="T_36" />
-		<Task status="" enabled="T" name="multi_port_loc" task_dependency="" Task_id="T_37" />
-		<Task status="" enabled="T" name="pms_c_code_lkup" task_dependency="" Task_id="T_38" />
-		<Task status="" enabled="T" name="item" task_dependency="" Task_id="T_39" />
-		<Task status="" enabled="T" name="hospital_load_history" task_dependency="" Task_id="T_40" />
-		<Task status="" enabled="T" name="vi_b_sz_lkup" task_dependency="" Task_id="T_41" />
-		<Task status="" enabled="T" name="pms_provider_lkup" task_dependency="" Task_id="T_42" />
-		<Task status="" enabled="T" name="site" task_dependency="" Task_id="T_43" />
-		<Task status="" enabled="T" name="microchip" task_dependency="" Task_id="T_45" />
-		<Task status="" enabled="T" name="vi_breed_lkup" task_dependency="" Task_id="T_46" />
-		<Task status="" enabled="T" name="can_life_hlth_art_map" task_dependency="" Task_id="T_47" />
-		<Task status="" enabled="T" name="feline_breed_map" task_dependency="" Task_id="T_48" />
+		<Task status="" enabled="F" name="pet_owner" task_dependency="" Task_id="T_23" />
+		<Task status="" enabled="F" name="appointment" task_dependency="" Task_id="T_24" />
+		<Task status="" enabled="F" name="vi_breed_cat_map" task_dependency="" Task_id="T_25" />
+		<Task status="" enabled="F" name="canine_breed_map" task_dependency="" Task_id="T_26" />
+		<Task status="" enabled="F" name="pms_color_lkup" task_dependency="" Task_id="T_27" />
+		<Task status="" enabled="F" name="vi_c_p_code_lkup" task_dependency="" Task_id="T_28" />
+		<Task status="" enabled="F" name="patient_vitals" task_dependency="" Task_id="T_29" />
+		<Task status="" enabled="F" name="pms_breed_lkup" task_dependency="" Task_id="T_30" />
+		<Task status="" enabled="F" name="vi_grooming_lkup" task_dependency="" Task_id="T_31" />
+		<Task status="" enabled="F" name="vi_color_lkup" task_dependency="" Task_id="T_32" />
+		<Task status="" enabled="F" name="pms_p_code_lkup" task_dependency="" Task_id="T_33" />
+		<Task status="" enabled="F" name="item_category" task_dependency="" Task_id="T_34" />
+		<Task status="" enabled="F" name="sub_lineitem" task_dependency="" Task_id="T_35" />
+		<Task status="" enabled="F" name="vi_breed_category" task_dependency="" Task_id="T_36" />
+		<Task status="" enabled="F" name="multi_port_loc" task_dependency="" Task_id="T_37" />
+		<Task status="" enabled="F" name="pms_c_code_lkup" task_dependency="" Task_id="T_38" />
+		<Task status="" enabled="F" name="item" task_dependency="" Task_id="T_39" />
+		<Task status="" enabled="F" name="hospital_load_history" task_dependency="" Task_id="T_40" />
+		<Task status="" enabled="F" name="vi_b_sz_lkup" task_dependency="" Task_id="T_41" />
+		<Task status="" enabled="F" name="pms_provider_lkup" task_dependency="" Task_id="T_42" />
+		<Task status="" enabled="F" name="site" task_dependency="" Task_id="T_43" />
+		<Task status="" enabled="F" name="microchip" task_dependency="" Task_id="T_45" />
+		<Task status="" enabled="F" name="vi_breed_lkup" task_dependency="" Task_id="T_46" />
+		<Task status="" enabled="F" name="can_life_hlth_art_map" task_dependency="" Task_id="T_47" />
+		<Task status="" enabled="F" name="feline_breed_map" task_dependency="" Task_id="T_48" />
 	</Container>
 	<Container status="" container_dependency="3" container_id="9" enabled="T" name="LOAD VCA ODS DATA">
 		<Task status="" enabled="T" name="VCA HDD Header" task_dependency="" Task_id="T_50" />
