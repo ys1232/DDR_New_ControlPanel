@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+.tasks {
+background-color: lightblue;
+opacity: 0.5;
+}
+</style>
+<span>Hello, world!</span>
+<div class = "tasks" id = "T_1" onclick="displayDate(this.id)">abc</div>
+<!--
+<button onclick="displayDate()">The time is?</button>
+<p id="demo"></p>
+-->
+<script>
+function displayDate(id) {
+    alert("yes!");
+	var fso = new ActiveXObject("Scripting.FileSystemObject");
+	
+	 var filename = "C:\\Users\\Hui\\Desktop\\DDR_Html_ControlPage\\data.txt";
+	 var a, ForAppending, file;
+	 ForAppending = 8;
+	 file = fso.OpenTextFile(filename, ForAppending, false);
+	 file.WriteLine("abc");
+   
+}
+</script>
+</body>
+</html>

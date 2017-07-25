@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+.tasks {
+    position: absolute;
+	z-index: 1;
+	background-color: DarkGray;
+	width:29px;
+	height:25px;
+	opacity: 0.5;
+	cursor: pointer; cursor: hand;
+}
+.img {
+	z-index: -1;
+}
+#T_1{top: 70px; left: 155px;}
+#T_2{top: 71px; left: 282px;}
+#T_3{top: 71px; left: 500px;}
+#T_4{top: 70px; left: 700px;}
+#T_5{top: 70px; left: 806px;}
+#T_6{top: 70px; left: 926px;}
+#T_7{top: 70px; left: 1044px;}
+#T_8{top: 70px; left: 1189px;}
+#T_9{top: 70px; left: 1372px;}
+#T_10{top: 236px; left: 78px;}
+#T_11{top: 344px; left: 78px;}
+#T_12{top: 464px; left: 82px;}
+#T_13{top: 632px; left: 80px;}
+#T_14{top: 178px; left: 268px;}
+#T_15{top: 263px; left: 265px;}
+#T_16{top: 348px; left: 268px;}
+#T_17{top: 178px; left: 420px;}
+#T_18{top: 238px; left: 421px;}
+#T_19{top: 298px; left: 423px;}
+#T_20{top: 370px; left: 428px;}
+#T_21{top: 190px; left: 615px;}
+#T_22{top: 252px; left: 610px;}
+#T_23{top: 180px; left: 1189px;}
+#T_24{top: 258px; left: 772px;}
+#T_25{top: 259px; left: 872px;}
+#T_26{top: 259px; left: 982px;}
+#T_27{top: 248px; left: 1093px;}
+#T_28{top: 270px; left: 1184px;}
+#T_29{top: 343px; left: 772px;}
+#T_30{top: 354px; left: 867px;}
+#T_31{top: 367px; left: 978px;}
+#T_32{top: 343px; left: 1087px;}
+#T_33{top: 356px; left: 1184px;}
+#T_34{top: 416px; left: 777px;}
+#T_35{top: 427px; left: 869px;}
+#T_36{top: 438px; left: 979px;}
+#T_37{top: 416px; left: 1088px;}
+#T_38{top: 429px; left: 1184px;}
+#T_39{top: 488px; left: 778px;}
+#T_40{top: 499px; left: 865px;}
+#T_41{top: 512px; left: 979px;}
+#T_42{top: 476px; left: 1089px;}
+#T_43{top: 512px; left: 1184px;}
+#T_44{top: 571px; left: 774px;}
+#T_45{top: 571px; left: 863px;}
+#T_46{top: 583px; left: 982px;}
+#T_47{top: 548px; left: 1096px;}
+#T_48{top: 582px; left: 1182px;}
+#T_49{top: 198px; left: 1375px;}
+#T_50{top: 292px; left: 1375px;}
+#T_51{top: 389px; left: 1371px;}
+#T_52{top: 484px; left: 1368px;}
+#T_53{top: 569px; left: 1370px;}
+#T_54{top: 666px; left: 1368px;}
+#T_55{top: 803px; left: 78px;}
+#T_56{top: 503px; left: 343px;}
+#T_57{top: 634px; left: 345px;}
+#T_58{top: 778px; left: 340px;}
+#T_59{top: 911px; left: 352px;}
+#T_60{top: 394px; left: 614px;}
+#T_61{top: 467px; left: 614px;}
+#T_62{top: 526px; left: 612px;}
+#T_63{top: 641px; left: 623px;}
+#T_64{top: 713px; left: 619px;}
+#T_65{top: 771px; left: 620px;}
+#T_66{top: 856px; left: 618px;}
+#T_67{top: 684px; left: 863px;}
+#T_68{top: 809px; left: 858px;}
+#T_69{top: 869px; left: 855px;}
+#T_70{top: 922px; left: 858px;}
+#T_71{top: 766px; left: 1181px;}
+#T_72{top: 826px; left: 1181px;}
+#T_73{top: 898px; left: 1187px;}
+
+
+
+
+</style>
+<body>
+
+<img src="unnamed.jpg" class = "img" usemap="#DD_ProcessFlow">
+
+<!-- -->
+<map name="DD_ProcessFlow">
+  <area shape="rect" coords="105,35,381,120" id = "C_1" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="417,23,597,119" id = "C_2" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="621,23,1461,119" id = "C_3" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="22,143,166,696" id = "C_4" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="190,143,340,419" id = "C_5" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="369,144,525,419" id = "C_6" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="562,144,706,300" id = "C_7" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="730,144,1282,636" id = "C_8" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="1295,144,1475,738" id = "C_9" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="22,743,166,872" id = "C_10" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="250,587,454,707" id = "C_11" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="286,851,425,959" id = "C_12" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="561,348,700,575" id = "C_14" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="561,588,700,913" id = "C_15" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="801,768,940,972" id = "C_16" onclick="Group_Manipulation(this.id)">
+  <area shape="rect" coords="1113,720,1269,960" id = "C_17" onclick="Group_Manipulation(this.id)">
+</map>
+
+
+
+<div class = "tasks" id = "T_1" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_2" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_3" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_4" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_5" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_6" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_7" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_8" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_9" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_10" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_11" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_12" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_13" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_14" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_15" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_16" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_17" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_18" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_19" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_20" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_21" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_22" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_23" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_24" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_25" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_26" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_27" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_28" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_29" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_30" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_31" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_32" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_33" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_34" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_35" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_36" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_37" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_38" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_39" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_40" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_41" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_42" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_43" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_44" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_45" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_46" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_47" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_48" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_49" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_50" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_51" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_52" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_53" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_54" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_55" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_56" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_57" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_58" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_59" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_60" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_61" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_62" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_63" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_64" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_65" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_66" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_67" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_68" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_69" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_70" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_71" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_72" onclick="displayDate(this.id)" ></div>
+<div class = "tasks" id = "T_73" onclick="displayDate(this.id)" ></div>
+
+<script type = "text/JavaScript">
+var Lkup_Dict = new Map(); //'T_',
+Lkup_Dict.set('C_1', ['T_1','T_2']);
+Lkup_Dict.set('C_2', ['T_3']);
+Lkup_Dict.set('C_3', ['T_4','T_5','T_6','T_7','T_8','T_9']);
+Lkup_Dict.set('C_4', ['T_10','T_11','T_12','T_13']);
+Lkup_Dict.set('C_5', ['T_14','T_15','T_16']);
+Lkup_Dict.set('C_6', ['T_17','T_18','T_19','T_20']);
+Lkup_Dict.set('C_7', ['T_21','T_22']);
+Lkup_Dict.set('C_8', ['T_23','T_24','T_25','T_26','T_27','T_28','T_29','T_30','T_31','T_32','T_33','T_34','T_35','T_36','T_37','T_38','T_39','T_40','T_41','T_42','T_43','T_44','T_45','T_46','T_47','T_48']);
+Lkup_Dict.set('C_9', ['T_49','T_50','T_51','T_52','T_53','T_54']);
+Lkup_Dict.set('C_10', ['T_55']);
+Lkup_Dict.set('C_11', ['T_57']);
+Lkup_Dict.set('C_12', ['T_59']);
+Lkup_Dict.set('C_13', ['T_60','T_61','T_62','T_63','T_64','T_65','T_66']);
+Lkup_Dict.set('C_14', ['T_60','T_61','T_62']);
+Lkup_Dict.set('C_15', ['T_63','T_64','T_65','T_66']);
+Lkup_Dict.set('C_16', ['T_68','T_69','T_70']);
+Lkup_Dict.set('C_17', ['T_71','T_72','T_73']);
+var Changed = "F";
+
+function displayDate(id) 
+{
+	Changed = "T";
+    var current_opacity =document.getElementById(id).style.opacity;
+	if (current_opacity == "0.5")
+	{
+		document.getElementById(id).style.opacity = "0.1";
+		Task_enabled_array[id] = "T";
+	}
+	else if ((current_opacity == "0.1"))
+	{
+		document.getElementById(id).style.opacity= "0.5";
+		Task_enabled_array[id] = "F";
+	}
+	else
+	{
+		document.getElementById(id).style.opacity = "0.1";
+		Task_enabled_array[id] = "F";
+	}
+		
+}
+function Group_Manipulation(id)
+{
+	Changed = "T";
+	Tasks = Lkup_Dict.get(id);
+	Task_previous_state = "";
+
+	Tasks.forEach(function(task)
+	{
+	//alert(task);
+		if (Task_previous_state == "")
+		{
+			Task_previous_state = document.getElementById(task).style.opacity;
+			if (document.getElementById(task).style.opacity == "0.5")
+			{
+				document.getElementById(task).style.opacity = "0.1";
+				Task_enabled_array[id] = "F";
+			}
+			else if (document.getElementById(task).style.opacity == "0.1")
+			{
+				document.getElementById(task).style.opacity = "0.5";
+				Task_enabled_array[id] = "F";
+			}
+			else
+			{
+				document.getElementById(task).style.opacity = "0.1";
+				Task_enabled_array[id] = "T";
+			}		
+		}
+		else if (Task_previous_state  == "0.5")
+		{
+			document.getElementById(task).style.opacity = "0.1";
+			Task_enabled_array[id] = "T";
+		}	
+		else 
+		{
+			document.getElementById(task).style.opacity = "0.5";
+			Task_enabled_array[id] = "F";
+		}		
+	});
+}
+
+window.onload = Xml_Reading;
+var Task_enabled_array = {};
+var XML_Text;
+
+
+function Xml_Reading() 
+{
+    //alert("yes!");
+	var parser, xmlDoc;
+	XML_Text =readTextFile("C:\\Users\\Hui\\Desktop\\DDR_Html_ControlPage\\DD_Hierachy_Config.xml");
+	parser = new DOMParser();
+	xmlDoc = parser.parseFromString(XML_Text,"text/xml");
+
+	var Tasks_Nodes_array = xmlDoc.getElementsByTagName("Task");
+
+	for (var i = 0; i<Tasks_Nodes_array.length; i++)
+	{
+		Task_enabled_array[Tasks_Nodes_array[i].getAttribute("Task_id")] = Tasks_Nodes_array[i].getAttribute("enabled");
+	}	
+	SetOpacity();
+
+}
+
+function readTextFile(file)
+{
+	var fso, f1,s;
+	fso = new ActiveXObject("Scripting.FileSystemObject");
+	f1 = fso.OpenTextFile(file, 1);
+	s = f1.Readall();
+	return s;
+}
+
+function SetOpacity()
+{
+	for (var key in Task_enabled_array)
+	{
+		if (Task_enabled_array[key] == 'T')
+			document.getElementById(key).style.opacity = "0.1";
+		else
+			document.getElementById(key).style.opacity = "0.5";
+	}
+}
+
+window.onbeforeunload = function()
+{
+//alert("before close");
+	if (Changed == "T")
+	{
+		var r = confirm("Save the change you made?");
+		if (r == true) {
+			
+			var parser, xmlDoc;
+			XML_Text =readTextFile("C:\\Users\\Hui\\Desktop\\DDR_Html_ControlPage\\DD_Hierachy_Config.xml");
+			parser = new DOMParser();
+			xmlDoc = parser.parseFromString(XML_Text,"text/xml");
+			
+			var x = xmlDoc.getElementsByTagName("Task");
+			
+			for (var i = 0; i<x.length; i++)
+			{
+				//alert(x[i].getAttribute("Task_id"));
+				x[i].setAttribute("enabled",Task_enabled_array[x[i].getAttribute("Task_id")]);
+			}
+		   
+			var oSerializer = new XMLSerializer();
+			var XML_serialized = oSerializer.serializeToString(xmlDoc);
+			//alert(XML_serialized);
+
+			var fso = new ActiveXObject("Scripting.FileSystemObject");
+			
+			var filename = "C:\\Users\\Hui\\Desktop\\DDR_Html_ControlPage\\DD_Hierachy_Config.xml";
+			if(fso.FileExists(filename))
+			{
+				//alert("file exists");
+				fso.CreateTextFile(filename);	// overwrite existing file
+			}
+
+			var a, ForAppending, file;
+			ForAppending = 8;
+			file = fso.OpenTextFile(filename, ForAppending, false);
+			file.Write(XML_serialized);
+			
+		} 
+
+	}
+
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<Containers>
+	<Container name = "EXECUTE STATUS PRE-STEPS" enabled = "T" container_id = "1" container_dependency = "" status = "">
+		<Task name = "Get_Postgres_Time" Task_id = "T_1" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "Oracle Is Running" Task_id = "T_2" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "PRE-LOAD TRUNC PATIENT, CLIENT AND LINEITEM" enabled = "T" container_id = "2" container_dependency = "1" status = "">
+		<Task name = "Truncate" Task_id = "T_3" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "LOAD PMS AND CLINIC DATA" enabled = "T" container_id = "3" container_dependency = "2" status = "">
+		<Task name = "pms" Task_id = "T_4" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "locale" Task_id = "T_5" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "country_lkup" Task_id = "T_6" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "state_lkup" Task_id = "T_7" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "pms_switch_hospitals" Task_id = "T_8" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "hospital" Task_id = "T_9" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "PRE-LOAD LINEITEM TRANSACTION DATA" enabled = "T" container_id = "4" container_dependency = "3" status = "">
+		<Task name = "pms_species_lkup" Task_id = "T_10" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "new lineitems" Task_id = "T_11" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "Premerge Lineitems" Task_id = "T_13" status = "" task_dependency = "10,11" enabled = "T"/>
+	</Container>
+	<Container name = "PRE-LOAD CLIENT DATA" enabled = "T" container_id = "5" container_dependency = "3" status = "">
+		<Task name = "pms_gender_lkup" Task_id = "T_14" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "client" Task_id = "T_15" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "PRE-LOAD PATIENT DATA" enabled = "T" container_id = "6" container_dependency = "3" status = "">
+		<Task name = "vi_gender_lkup" Task_id = "T_17" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "vi_species_lkup" Task_id = "T_18" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "patient" Task_id = "T_19" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "LOAD SERVICES DATA" enabled = "T" container_id = "7" container_dependency = "3" status = "">
+		<Task name = "pms_service_lookup1" Task_id = "T_21" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "LOAD PATIENT METADATA" enabled = "T" container_id = "8" container_dependency = "3" status = "">
+		<Task name = "pet_owner" Task_id = "T_23" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "appointment" Task_id = "T_24" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "vi_breed_cat_map" Task_id = "T_25" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "canine_breed_map" Task_id = "T_26" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "pms_color_lkup" Task_id = "T_27" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "vi_c_p_code_lkup" Task_id = "T_28" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "patient_vitals" Task_id = "T_29" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "pms_breed_lkup" Task_id = "T_30" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "vi_grooming_lkup" Task_id = "T_31" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "vi_color_lkup" Task_id = "T_32" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "pms_p_code_lkup" Task_id = "T_33" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "item_category" Task_id = "T_34" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "sub_lineitem" Task_id = "T_35" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "vi_breed_category" Task_id = "T_36" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "multi_port_loc" Task_id = "T_37" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "pms_c_code_lkup" Task_id = "T_38" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "item" Task_id = "T_39" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "hospital_load_history" Task_id = "T_40" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "vi_b_sz_lkup" Task_id = "T_41" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "pms_provider_lkup" Task_id = "T_42" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "site" Task_id = "T_43" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "microchip" Task_id = "T_45" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "vi_breed_lkup" Task_id = "T_46" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "can_life_hlth_art_map" Task_id = "T_47" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "feline_breed_map" Task_id = "T_48" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "LOAD VCA ODS DATA" enabled = "T" container_id = "9" container_dependency = "3" status = "">
+		<Task name = "VCA HDD Header" Task_id = "T_50" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "VCA HDD Detail" Task_id = "T_51" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "VCA Referrals Client" Task_id = "T_52" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "VCA Referrals Patient" Task_id = "T_53" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "LOAD LINEITEM TRANSACTION DATA" enabled = "T" container_id = "10" container_dependency = "4" status = "">
+		<Task name = "Cooked Lineitems" Task_id = "T_55" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "LOAD CLIENT AND PATIENT DATA" enabled = "T" container_id = "11" container_dependency = "5,6" status = "">
+		<Task name = "Cooked_Load" Task_id = "T_57" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "AGGREGATE SERVICE TRANSACTION DATA" enabled = "T" container_id = "12" container_dependency = "4" status = "">
+		<Task name = "Watchdog by Service" Task_id = "T_59" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+	<Container name = "LOAD LENS DATA" enabled = "T" container_id = "13" container_dependency = "7" status = "">
+		<Container name = "EXECUTE AND LOAD GENERAL LENS DATA" enabled = "T" container_id = "14" container_dependency = "7" status = "">
+			<Task name = "Daily Delta DSA" Task_id = "T_61" status = "" task_dependency = "" enabled = "T"/>
+		</Container>
+		<Container name = "EXECUTE AND LOAD VACCINE LENS DATA" enabled = "T" container_id = "15" container_dependency = "14" status = "">
+			<Task name = "VACCINE_RULES" Task_id = "T_64" status = "" task_dependency = "" enabled = "T"/>
+			<Task name = "Vaccine DSA" Task_id = "T_65" status = "" task_dependency = "64" enabled = "T"/>
+		</Container>
+	</Container>
+	<Container name = "LOAD NORMALIZED DATA" enabled = "T" container_id = "16" container_dependency = "10,11,14" status = "">
+		<Task name = "FTH_NORM" Task_id = "T_68" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "NS_NORM" Task_id = "T_69" status = "" task_dependency = "68" enabled = "T"/>
+		<Task name = "ATOPICA_NORM" Task_id = "T_70" status = "" task_dependency = "69" enabled = "T"/>
+	</Container>
+	<Container name = "EXECUTE STATUS POST-STEPS" enabled = "T" container_id = "17" container_dependency = "8,9,10,12,15,16" status = "">
+		<Task name = "Update_Success" Task_id = "T_71" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "Insert_Run_Date" Task_id = "T_72" status = "" task_dependency = "" enabled = "T"/>
+		<Task name = "Oracle Not Running" Task_id = "T_73" status = "" task_dependency = "" enabled = "T"/>
+	</Container>
+</Containers>
