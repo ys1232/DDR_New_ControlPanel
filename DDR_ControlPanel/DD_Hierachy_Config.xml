@@ -1,0 +1,95 @@
+<Containers>
+	<Container name="EXECUTE STATUS PRE-STEPS" enabled="T" container_id="C_1" container_dependency="">
+		<Task name="Get_Postgres_Time" enabled="F" Task_id="T_1" task_dependency="" />
+		<Task name="Oracle Is Running" enabled="F" Task_id="T_2" task_dependency="" />
+	</Container>
+	<Container name="PRE-LOAD TRUNC PATIENT, CLIENT AND LINEITEM" enabled="T" container_id="C_2" container_dependency="1">
+		<Task name="Truncate" enabled="F" Task_id="T_3" task_dependency="" />
+	</Container>
+	<Container name="LOAD PMS AND CLINIC DATA" enabled="T" container_id="C_3" container_dependency="2">
+		<Task name="pms" enabled="F" Task_id="T_4" task_dependency="" />
+		<Task name="locale" enabled="F" Task_id="T_5" task_dependency="" />
+		<Task name="country_lkup" enabled="F" Task_id="T_6" task_dependency="" />
+		<Task name="state_lkup" enabled="F" Task_id="T_7" task_dependency="" />
+		<Task name="pms_switch_hospitals" enabled="F" Task_id="T_8" task_dependency="" />
+		<Task name="hospital" enabled="F" Task_id="T_9" task_dependency="" />
+	</Container>
+	<Container name="PRE-LOAD LINEITEM TRANSACTION DATA" enabled="T" container_id="C_4" container_dependency="3">
+		<Task name="pms_species_lkup" enabled="F" Task_id="T_10" task_dependency="" />
+		<Task name="new lineitems" enabled="F" Task_id="T_11" task_dependency="" />
+		<Task name="Premerge Lineitems" enabled="F" Task_id="T_13" task_dependency="T_10,T_11" />
+	</Container>
+	<Container name="PRE-LOAD CLIENT DATA" enabled="T" container_id="C_5" container_dependency="3">
+		<Task name="pms_gender_lkup" enabled="F" Task_id="T_14" task_dependency="" />
+		<Task name="client" enabled="F" Task_id="T_15" task_dependency="" />
+	</Container>
+	<Container name="PRE-LOAD PATIENT DATA" enabled="T" container_id="C_6" container_dependency="3">
+		<Task name="vi_gender_lkup" enabled="F" Task_id="T_17" task_dependency="" />
+		<Task name="vi_species_lkup" enabled="F" Task_id="T_18" task_dependency="" />
+		<Task name="patient" enabled="F" Task_id="T_19" task_dependency="" />
+	</Container>
+	<Container name="LOAD SERVICES DATA" enabled="T" container_id="C_7" container_dependency="3">
+		<Task name="pms_service_lookup1" enabled="F" Task_id="T_21" task_dependency="" />
+	</Container>
+	<Container name="LOAD PATIENT METADATA" enabled="T" container_id="C_8" container_dependency="3">
+		<Task name="pet_owner" enabled="T" Task_id="T_23" task_dependency="" />
+		<Task name="appointment" enabled="T" Task_id="T_24" task_dependency="" />
+		<Task name="vi_breed_cat_map" enabled="T" Task_id="T_25" task_dependency="T_23,T_24" />
+		<Task name="canine_breed_map" enabled="T" Task_id="T_26" task_dependency="" />
+		<Task name="pms_color_lkup" enabled="T" Task_id="T_27" task_dependency="" />
+		<Task name="vi_c_p_code_lkup" enabled="F" Task_id="T_28" task_dependency="" />
+		<Task name="patient_vitals" enabled="F" Task_id="T_29" task_dependency="" />
+		<Task name="pms_breed_lkup" enabled="F" Task_id="T_30" task_dependency="" />
+		<Task name="vi_grooming_lkup" enabled="F" Task_id="T_31" task_dependency="" />
+		<Task name="vi_color_lkup" enabled="F" Task_id="T_32" task_dependency="" />
+		<Task name="pms_p_code_lkup" enabled="F" Task_id="T_33" task_dependency="" />
+		<Task name="item_category" enabled="F" Task_id="T_34" task_dependency="" />
+		<Task name="sub_lineitem" enabled="F" Task_id="T_35" task_dependency="" />
+		<Task name="vi_breed_category" enabled="F" Task_id="T_36" task_dependency="" />
+		<Task name="multi_port_loc" enabled="F" Task_id="T_37" task_dependency="" />
+		<Task name="pms_c_code_lkup" enabled="F" Task_id="T_38" task_dependency="" />
+		<Task name="item" enabled="F" Task_id="T_39" task_dependency="" />
+		<Task name="hospital_load_history" enabled="F" Task_id="T_40" task_dependency="" />
+		<Task name="vi_b_sz_lkup" enabled="F" Task_id="T_41" task_dependency="" />
+		<Task name="pms_provider_lkup" enabled="F" Task_id="T_42" task_dependency="" />
+		<Task name="site" enabled="F" Task_id="T_43" task_dependency="" />
+		<Task name="microchip" enabled="F" Task_id="T_45" task_dependency="" />
+		<Task name="vi_breed_lkup" enabled="F" Task_id="T_46" task_dependency="" />
+		<Task name="can_life_hlth_art_map" enabled="F" Task_id="T_47" task_dependency="" />
+		<Task name="feline_breed_map" enabled="F" Task_id="T_48" task_dependency="" />
+	</Container>
+	<Container name="LOAD VCA ODS DATA" enabled="T" container_id="C_9" container_dependency="3">
+		<Task name="VCA HDD Header" enabled="F" Task_id="T_50" task_dependency="" />
+		<Task name="VCA HDD Detail" enabled="F" Task_id="T_51" task_dependency="" />
+		<Task name="VCA Referrals Client" enabled="F" Task_id="T_52" task_dependency="" />
+		<Task name="VCA Referrals Patient" enabled="F" Task_id="T_53" task_dependency="" />
+	</Container>
+	<Container name="LOAD LINEITEM TRANSACTION DATA" enabled="T" container_id="C_10" container_dependency="4">
+		<Task name="Cooked Lineitems" enabled="F" Task_id="T_55" task_dependency="" />
+	</Container>
+	<Container name="LOAD CLIENT AND PATIENT DATA" enabled="T" container_id="C_11" container_dependency="5,6">
+		<Task name="Cooked_Load" enabled="F" Task_id="T_57" task_dependency="" />
+	</Container>
+	<Container name="AGGREGATE SERVICE TRANSACTION DATA" enabled="T" container_id="C_12" container_dependency="4">
+		<Task name="Watchdog by Service" enabled="F" Task_id="T_59" task_dependency="" />
+	</Container>
+	<Container name="LOAD LENS DATA" enabled="T" container_id="C_13" container_dependency="7">
+		<Container name="EXECUTE AND LOAD GENERAL LENS DATA" enabled="T" container_id="C_14" container_dependency="7">
+			<Task name="Daily Delta DSA" enabled="F" Task_id="T_61" task_dependency="" />
+		</Container>
+		<Container name="EXECUTE AND LOAD VACCINE LENS DATA" enabled="T" container_id="C_15" container_dependency="14">
+			<Task name="VACCINE_RULES" enabled="F" Task_id="T_64" task_dependency="" />
+			<Task name="Vaccine DSA" enabled="F" Task_id="T_65" task_dependency="64" />
+		</Container>
+	</Container>
+	<Container name="LOAD NORMALIZED DATA" enabled="T" container_id="C_16" container_dependency="10,11,14">
+		<Task name="FTH_NORM" enabled="F" Task_id="T_68" task_dependency="" />
+		<Task name="NS_NORM" enabled="F" Task_id="T_69" task_dependency="T_68" />
+		<Task name="ATOPICA_NORM" enabled="F" Task_id="T_70" task_dependency="T_69" />
+	</Container>
+	<Container name="EXECUTE STATUS POST-STEPS" enabled="T" container_id="C_17" container_dependency="8,9,10,12,15,16">
+		<Task name="Update_Success" enabled="F" Task_id="T_71" task_dependency="" />
+		<Task name="Insert_Run_Date" enabled="F" Task_id="T_72" task_dependency="" />
+		<Task name="Oracle Not Running" enabled="F" Task_id="T_73" task_dependency="" />
+	</Container>
+</Containers>

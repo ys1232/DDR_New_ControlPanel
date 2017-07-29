@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+.tasks {
+background-color: lightblue;
+opacity: 0.5;
+}
+</style>
+<span>Hello, world!</span>
+<div class = "tasks" id = "T_1" onclick="displayDate(this.id)">abc</div>
+<!--
+<button onclick="displayDate()">The time is?</button>
+<p id="demo"></p>
+-->
+<script>
+window.onload = displayDate;
+var Task_enabled_array = {};
+
+function displayDate() 
+{
+    alert("yes!");
+	
+	var XML_Text =readTextFile("C:\\Users\\Hui\\Desktop\\DDR_Html_ControlPage\\DD_Hierachy_Config.xml");
+	parser = new DOMParser();
+	xmlDoc = parser.parseFromString(XML_Text,"text/xml");
+	var Tasks_Nodes_array = xmlDoc.getElementsByTagName("Task");
+
+
+
+	for (var i = 0; i<Tasks_Nodes_array.length; i++)
+	{
+		Task_enabled_array[Tasks_Nodes_array[i].getAttribute("Task_id")] = Tasks_Nodes_array[i].getAttribute("enabled");
+	}	
+	
+
+	for (var key in Task_enabled_array)
+	{
+		alert(Task_enabled_array[key]);
+	}
+	
+}
+
+function readTextFile(file)
+{
+	var fso, f1,s;
+	fso = new ActiveXObject("Scripting.FileSystemObject");
+	f1 = fso.OpenTextFile(file, 1);
+	s = f1.Readall();
+	return s;
+}
+</script>
+</body>
+</html>
