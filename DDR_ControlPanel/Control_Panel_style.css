@@ -24,10 +24,18 @@ margin-bottom:15px;
 .show_dependency_btn{
 	
 	margin-left:30px;
+	//z-index: 1;
 }
 
+.Container_name_span{
+	cursor: pointer; cursor: hand;
+	
+}
 
 .collapse_btn{
 	cursor: pointer; cursor: hand;
 	
+}
+.Task_Name_Span{
+	cursor: pointer; cursor: hand;
 }

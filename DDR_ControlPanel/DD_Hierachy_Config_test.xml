@@ -1,0 +1,9 @@
+<Containers>
+	<Container container_dependency="" container_id="C_1" enabled="T" name="EXECUTE STATUS PRE-STEPS">
+		<Task enabled="T" name="Get_Postgres_Time" task_dependency="" Task_id="T_1" />
+		<Task enabled="T" name="Oracle Is Running" task_dependency="T_1" Task_id="T_2" />
+	</Container>
+	<Container container_dependency="1" container_id="C_2" enabled="T" name="PRE-LOAD TRUNC PATIENT, CLIENT AND LINEITEM">
+		<Task enabled="T" name="Truncate" task_dependency="T_1,T_2" Task_id="T_3" />
+	</Container>
+</Containers>

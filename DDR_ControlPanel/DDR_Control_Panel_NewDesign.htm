@@ -10,11 +10,12 @@
 </head>
 <body>
 <img src="Header.PNG"> 
+<!--
 </div>
-
+-->
   <ul class="nav nav-tabs header_panel">
     <!--<li class="active"><a data-toggle="tab" href="#home">Overview Of Program Flow</a></li>-->
-    <li class="active"><a data-toggle="tab" href="#menu1">Program Settings</a></li>
+    <li class="active"><a data-toggle="tab" href="#setting_menu">Program Settings</a></li>
     <li><a data-toggle="tab" href="#menu2">Realtime Status Report</a></li>
 	<li><a data-toggle="tab" href="#menu3">Historical Status Report</a></li>
   </ul>
@@ -26,23 +27,25 @@
 		<img src="ProgramFlow.jpg">
 	  </div>
 	  -->
-		<div id="menu1" class="tab-pane fade in active">
+		<div id="setting_menu" class="tab-pane fade in active">
+			
 			<div class="container">
 				<div class = "Container_Item"> <span href="#demo" class = "collapse_btn" data-toggle="collapse"><<</span> EXECUTE STATUS PRE-STEPS</div>
 				<div id = "demo" class = "collapse">
-					<div class = "Task_Item">Get_Postgres_Time 
+					<div class = "Task_Item" id = "T_0" style="opacity:0.3;" ><span class = "Task_Name_Span" onclick="Disable_Task(this)">Get_Postgres_Time</span>
 						<button type="button" class="btn btn-default show_dependency_btn" href="#Dependency_list_1" data-toggle="collapse">Show Dependency</button>
 					</div>
 					<div class="collapse panel panel-default" id = "Dependency_list_1">
-						<div class="panel-body">A Basic Panel,Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, A Basic Panel,Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time</div>
+						<div class="panel-body dependency_text">A Basic Panel,Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, A Basic Panel,Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time, Get_Postgres_Time</div>
 						<button type="button" id = "T_test" class="btn btn-default" onclick="Edit_Dependency(this.id)">Edit</button>
-		
+						<textarea class="form-control" rows="5" id="comment"></textarea> 
+						<button type="button" id = "T_test" class="btn btn-default" onclick="Edit_Dependency(this.id)">Save</button>
+						<button type="button" id = "T_test" class="btn btn-default" onclick="Edit_Dependency(this.id)">Cancle</button>
 					</div>
-					<div class = "Task_Item">Oracle Is Running</div>
-				</div>
-				
+				</div>				
 				<div>something after container item</div>
 			</div>
+			
 		</div>
 	  <div id="menu2">
 	  
